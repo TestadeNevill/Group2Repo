@@ -2,3 +2,41 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: gray;
+  color: whitesmoke;
+  padding-top: 30px;
+}
+
+header a {
+  color: tan;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #companybranding {
+  float: left;
+}
+
+header #companybranding h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
