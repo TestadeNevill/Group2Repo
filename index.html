@@ -19,55 +19,69 @@
       }
     </style>
     <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById("map"), {
+          center: {
+            lat: 40.7128,
+            lng: -74.006,
+          },
+          zoom: 6,
+          mapTypeId: "terrain",
+        });
+        var lineSymbol = {
+          path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+          scale: 3,
+          strokeColor: "red",
+        };
+        var line = new google.maps.Polyline({
+          path: [
+            {
+              lat: 40.7128,
+              lng: -74.006,
+            },
+            {
+              lat: 38.9072,
+              lng: -77.0369,
+            },
+          ],
+          strokeColor: "#FF0000",
+          strokeOpacity: 1.0,
+          strokeWeight: 0,
+          icons: [
+            {
+              icon: lineSymbol,
+              offset: "50%",
+            },
+          ],
+          map: map,
+        });
+        animateCircle(line);
+      }
 
-
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {
-      lat: 40.7128,
-      lng: -74.0060
-    },
-    zoom: 6,
-    mapTypeId: 'terrain'
-  });
-  var lineSymbol = {
-    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-    scale: 3, 
-    strokeColor: 'red'
-  };
-  var line = new google.maps.Polyline({
-    path: [{
-      lat: 40.7128,
-      lng: -74.0060
-    }, {
-      lat: 38.9072,
-      lng: -77.0369
-    }],
-    strokeColor: '#FF0000',
-    strokeOpacity: 1.0,
-    strokeWeight: 0, 
-    icons: [{
-      icon: lineSymbol,
-      offset: '50%'
-    }],
-    map: map
-  });
-  animateCircle(line);
-};
-
-function animateCircle(line) {
-  var count = 0;
-  window.setInterval(function() {
-    count = (count + 1) % 200; 
-    var icons = line.get('icons');
-    icons[0].offset = (count / 2) + '%';
-    line.set('icons', icons);
-  }, 100); 
-};
+      function animateCircle(line) {
+        var count = 0;
+        window.setInterval(function() {
+          count = (count + 1) % 200;
+          var icons = line.get("icons");
+          icons[0].offset = count / 2 + "%";
+          line.set("icons", icons);
+        }, 100);
+      }
     </script>
   </head>
   <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">OUR</span> NEEDS</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a id="products" href="products.html">Products</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div id="map"></div>
   </body>
 </html>
-
