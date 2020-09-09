@@ -26,4 +26,18 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
+
+  app.get("/ourmap", (req, res) => {
+    res.sendFile(path.join(__dirname, "../index.html"));
+  });
+  //   app.get("/logout", (req, res) => {
+  //     req.logout();
+  //     res.redirect("/");
+  //   });
+  // });
+  // app.get("/products", (req, res) => {
+  //   res.sendFile(
+  //     path.join(__dirname, "C:\Users\build\OneDrive\Desktop\Project 2\public\products.html")
+  //     //   );
+  //   });
 };
