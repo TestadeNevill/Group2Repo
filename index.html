@@ -6,25 +6,40 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-    <link href="stylesheets/style.css" rel="stylesheet">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQKBwPUkZwBCgZTxl4p3J8uSghCaebYK0&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Your Order Is Being Processed!</h1>
-        <p class="lead">Feel Free to Watch and Follow as Your Package is Delivered!</p>        
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">OurNeeds</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Login/Signup <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="#">OurMembers</a>
+          <a class="nav-item nav-link active" href="#">OurProducts</a>
+          <a class="nav-item nav-link active" href="#">OurMap</a>
+        </div>
       </div>
+    </nav>
+    <div class="header">
+      <h1>Watch And Follow Your Order While It's Proccessed And Delivered!</h1>
+  
+
+    </div>
+    <div class="container">
       <ol class="progtrckr" data-progtrckr-steps="5">
-        <li class="progtrckr-done">Processing Order</li>
-        <li class="progtrckr-done">Order Confirmed</li>
-        <li class="progtrckr-done">Packaged Order</li>
-        <li class="progtrckr-todo">Shipping Order</li>
-        <li class="progtrckr-todo">Delivered</li>
+        <li class="progtrckr-done">Order Processing</li><!--
+     --><li class="progtrckr-done">Pre-Production</li><!--
+     --><li class="progtrckr-done">In Production</li><!--
+     --><li class="progtrckr-todo">Shipped</li><!--
+     --><li class="progtrckr-todo">Delivered</li>
     </ol>
+    </div>
     </div>
     </head>
     <body>
@@ -37,23 +52,17 @@
         #map {
           position:absolute;
           width:100%; grid-auto-columns: auto;
-          height:71.2%; 
+          height:76.2%; 
           background:#063;
           bottom:1px;
           border-style: solid;
-          border-color: blue;
+          border-color: black;
           
        
         }
          body {
-          background-color: gray;
-          color: gray;
+          background-color: cornflowerblue;
           
-        }
-        .jumbotron {
-          background-color: black;
-          border-style: solid;
-          border-color:blue;
           
         }
         .display-4 {
@@ -75,6 +84,86 @@
           margin: 0;
           padding: 0;
         }
+        .progtrcker {
+          margin: auto;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        ol.progtrckr {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ol.progtrckr li {
+    display: inline-block;
+    text-align: center;
+    line-height: 3.5em;
+}
+
+ol.progtrckr[data-progtrckr-steps="2"] li { width: 49%; }
+ol.progtrckr[data-progtrckr-steps="3"] li { width: 33%; }
+ol.progtrckr[data-progtrckr-steps="4"] li { width: 24%; }
+ol.progtrckr[data-progtrckr-steps="5"] li { width: 19%; }
+ol.progtrckr[data-progtrckr-steps="6"] li { width: 16%; }
+ol.progtrckr[data-progtrckr-steps="7"] li { width: 14%; }
+ol.progtrckr[data-progtrckr-steps="8"] li { width: 12%; }
+ol.progtrckr[data-progtrckr-steps="9"] li { width: 11%; }
+
+ol.progtrckr li.progtrckr-done {
+    color: black;
+    border-bottom: 4px solid black;
+}
+ol.progtrckr li.progtrckr-todo {
+    color: black; 
+    border-bottom: 4px solid grey;
+}
+
+ol.progtrckr li:after {
+    content: "\00a0\00a0";
+}
+ol.progtrckr li:before {
+    position: relative;
+    bottom: -2.5em;
+    float: left;
+    left: 50%;
+    line-height: 1em;
+}
+ol.progtrckr li.progtrckr-done:before {
+    content: "\2713";
+    color: cornflowerblue;
+    background-color: black;
+    height: 2.2em;
+    width: 2.2em;
+    line-height: 2.2em;
+    border: none;
+    border-radius: 2.2em;
+}
+ol.progtrckr li.progtrckr-todo:before {
+    content: "\2713";
+    color: cornflowerblue;
+    background-color: black;
+    height: 2.2em;
+    width: 2.2em;
+    line-height: 2.2em;
+    border: none;
+    border-radius: 2.2em;
+}
+.header {
+  color: black;
+  text-align: center;
+  text-underline-position: below;
+  
+}
+@media screen and (max-width: 500px) {
+  .header {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+
+
       
       </style>
     <script>
