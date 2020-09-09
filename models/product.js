@@ -33,6 +33,16 @@ module.exports = function(sequelize, DataTypes) {
   return Product;
 };
 
+// sequelize.sync({ force: true }).then(() => {
+//   Note.bulkCreate(notes, { validate: true }).then(() => {
+//       console.log('New products added.');
+//   }).catch((err) => {
+//       console.log('failed to create notes');
+//       console.log(err);
+//   }).finally(() => {
+//       sequelize.close();
+//   });
+
 // Project.findOne({ where: { title: "My Title" } });
 // if (project === null) {
 //   console.log("Not found!");
