@@ -5,15 +5,21 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
   });
 
-  $("#productsview").on("click", function() {
-    // console.log($(this).text(data));
-    $.get("/api/product").then((data) => {
-      console.log(data);
+  $.get("/api/ourmap").then((data) => {
+    $("#ourmaplink").on("click", function() {
+      console.log("Link works");
     });
   });
+
+  //   $("#productsview").on("click", function() {
+  //     // console.log($(this).text(data));
+  //     $.get("/api/product").then((data) => {
+  //       console.log(data);
+  //     });
+  //   });
 });
 
-// $("#productsview").on("click", function() {
+// $("#ourmaplink").on("click", function() {
 //   // console.log($(this).text(data));
 //   $.get("/api/product").then((data) => {
 //     console.log(data);
