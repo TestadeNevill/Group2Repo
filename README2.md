@@ -11,21 +11,14 @@
 2. Create Products.
    Column rows are ID, Item_Name, Picture, Item_Number(Food-1, Cleaning-2, Heat-3, Shelter-4, Clothing-5, Equiptment-6) Unit_Price, Quantity, Store_ID
 
-3. Toilet paper
-4. Duct tape
-5. Lighters
-6. Batteries
-7. Flashlights
-8. Candles
-9. Bleach
-10. Plastic bags
-11. Tarps
-12. Socks
-13. Salt, Canned Foods, Peanut Butter
-14. Heirloom seeds
-15. Propane
-16. Lantern, lamp wicks, and lamp oil
-17. Rope
+18) Connect product database list and display with images on html page.
+    How will images be displayed a. object of images paired with handlebars/javascript
 
-18. Connect list with html page.
+create local storage based on checked/selected items(calculate price, change quantity, display name, price total and image(s)) and generate receipt information
+Add address/continue to next page and next page to tracker
+
+Search by item_name
+admins can add and update products
+Social media page and blog.
+
 19. Create A Post & Get Request.
