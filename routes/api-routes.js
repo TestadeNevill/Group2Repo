@@ -72,6 +72,30 @@ module.exports = function(app) {
     //   );
     // });
   });
+
+  app.get("/api/product", (req, res) => {
+    db.Product.findAll({})
+      .then((data) => {
+        console.log(data);
+        res.json(data);
+      })
+      .catch((err) => {
+        res.status(401).json(err);
+      });
+  });
+
+  // app.get("/api/products", (req, res) => {
+  // db.prodcuts.findAll({
+  //   where: {
+  //     item_number: 1,
+  //   },
+  // });
+  // app.post("/api/products",(req, res) => {
+  // db.prodcuts.udpate({ item_name item_number
+  //   where: {
+  //     authorId: 2,
+  //   },
+  // });
 };
 
 // db.Product.create
