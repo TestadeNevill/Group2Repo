@@ -12,3 +12,16 @@ $(document).ready(() => {
     });
   });
 });
+
+// $("#productsview").on("click", function() {
+//   // console.log($(this).text(data));
+//   $.get("/api/product").then((data) => {
+//     console.log(data);
+//   });
+
+// $("#createproduct").on("click", function() {
+//   // console.log($(this).text(data));
+//   $.get("/api/createproducts").then((data) => {
+//     console.log(data);
+//   });
+// });
