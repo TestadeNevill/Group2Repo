@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">OurNeeds</a>
@@ -16,13 +17,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Login/Signup <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link active" href="#">OurMembers</a>
-        <a class="nav-item nav-link active" href="#">OurProducts</a>
-        <a class="nav-item nav-link active" href="#">OurMap</a>
+        <a id="ouloginlink" class="nav-item nav-link active" href="login.html">Login/Signup <span class="sr-only">(current)</span></a>
+        <a id="ourmemberslink" class="nav-item nav-link active" href="members.html">OurMembers</a>
+        <a id="ourproductslink" class="nav-item nav-link active" href="products.html">OurProducts</a>
+        <a id="ourmaplink" class="nav-item nav-link active" href="index.html">OurMap</a>
       </div>
-    </div>
-  </nav>
+
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -43,7 +43,7 @@
           <button type="submit" class="btn btn-default">Sign Up</button>
         </form>
         <br />
-        <p>Or Sign Up <a href="/signup">here</a></p>
+
       </div>
     </div>
   </div>

@@ -3,6 +3,9 @@ const db = require("../models");
 const passport = require("../config/passport");
 
 module.exports = function(app) {
+  // app.route("/api/ourmap", (req,res) => {
+
+  // }
   app.get("/api/product", (req, res) => {
     db.Product.findAll({})
       .then((data) => {
@@ -83,7 +86,6 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
-
   // app.get("/api/products", (req, res) => {
   // db.prodcuts.findAll({
   //   where: {
